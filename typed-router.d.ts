@@ -40,8 +40,10 @@ import type {
 declare module 'vue-router/auto/routes' {
   export interface RouteNamedMap {
     '/': RouteRecordInfo<'/', '/', Record<never, never>, Record<never, never>>,
+    '/border-radius/border-radius': RouteRecordInfo<'/border-radius/border-radius', '/border-radius/border-radius', Record<never, never>, Record<never, never>>,
     '/bottom-sheet/cpts/bottom-sheet': RouteRecordInfo<'/bottom-sheet/cpts/bottom-sheet', '/bottom-sheet/cpts/bottom-sheet', Record<never, never>, Record<never, never>>,
     '/bottom-sheet/page-bottom-sheet': RouteRecordInfo<'/bottom-sheet/page-bottom-sheet', '/bottom-sheet/page-bottom-sheet', Record<never, never>, Record<never, never>>,
+    '/box-shaow/box-shaow': RouteRecordInfo<'/box-shaow/box-shaow', '/box-shaow/box-shaow', Record<never, never>, Record<never, never>>,
     '/btn/page-btn': RouteRecordInfo<'/btn/page-btn', '/btn/page-btn', Record<never, never>, Record<never, never>>,
     '/u-bottom-select/page-bottom-select': RouteRecordInfo<'/u-bottom-select/page-bottom-select', '/u-bottom-select/page-bottom-select', Record<never, never>, Record<never, never>>,
   }

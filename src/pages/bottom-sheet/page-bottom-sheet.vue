@@ -6,4 +6,5 @@
 import bottomSheet from './cpts/bottom-sheet.vue';
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+</style>

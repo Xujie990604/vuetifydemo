@@ -1,28 +1,19 @@
 <template>
   <v-card class="mx-auto">
     <v-list v-model:opened="open">
-      <v-list-group
-        v-for="listGroup in listGroupArray"
-        :key="listGroup.listGroupTitle"
-        :value="listGroup.listGroupTitle"
-      >
+      <v-list-group v-for="listGroup in listGroupArray" :key="listGroup.listGroupTitle"
+        :value="listGroup.listGroupTitle">
         <!-- TODO: 这个 props 是个什么东西，里面都有啥内容 -->
         <template v-slot:activator="{ props }">
-          <v-list-item
-            v-bind="props"
-            :title="listGroup.listGroupTitle"
-          ></v-list-item>
+          <v-list-item v-bind="props" :title="listGroup.listGroupTitle"></v-list-item>
         </template>
 
-        <v-list-item
-          v-for="(listItem, i) in listGroup.listGroupItemArray"
-          :key="i"
-          :title="listItem.itemTitle"
-          :to="listItem.router"
-        ></v-list-item>
+        <v-list-item v-for="(listItem, i) in listGroup.listGroupItemArray" :key="i" :title="listItem.itemTitle"
+          :to="listItem.router"></v-list-item>
       </v-list-group>
     </v-list>
   </v-card>
+  <v-btn class="d-sm-flex d-md-none d-none">ss</v-btn>
 </template>
 
 <script lang="ts" setup>
@@ -30,6 +21,16 @@ import { reactive, ref } from "vue";
 
 // TODO: 使用 reactive 就会有问题，使用 ref 就没有问题，很奇怪
 const open = ref([]);
+
+const defaults = reactive({
+  'VBtn': {
+    'color': 'primary', 'size': 'large', 'variant': 'tonal'
+  },
+  'VBtnTertiary': {
+    rounded: false,
+    variant: 'tonal',
+  },
+})
 
 const listGroupArray = reactive([
   {
@@ -54,7 +55,23 @@ const listGroupArray = reactive([
       },
     ],
   },
+  {
+    listGroupTitle: "工具类",
+    listGroupItemArray: [
+      {
+        itemTitle: "边距圆角",
+        router: '/content/border-radius'
+      },
+      {
+        itemTitle: "阴影",
+        router: '/content/box-shaow'
+      },
+    ],
+  },
 ]);
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+// 导入 scss 变量、混入、函数
+@use '../assets/css/base' as *;
+</style>

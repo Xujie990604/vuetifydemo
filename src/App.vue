@@ -1,6 +1,9 @@
 <template>
+  <!-- v-app 是整个 Vuetify 组件的挂载点，全局只能有一个 -->
   <v-app>
-    <v-system-bar> Vuetify 组件演示 </v-system-bar>
+    <!-- 取代原生手机系统栏 -->
+    <v-system-bar class="d-flex justify-center"> Vuetify 组件演示 </v-system-bar>
+    <!-- 在 v-main 中放置页面内容 -->
     <v-main>
       <router-view />
     </v-main>
@@ -8,12 +11,7 @@
 </template>
 
 <script lang="ts" setup>
-//
+
 </script>
-<style lang="css">
-.v-system-bar {
-  /* TODO:不应该在这改，应该改 CSS 变量 */
-  /* height: 44px!important; */
-  justify-content: center!important;
-}
+<style lang="scss">
 </style>

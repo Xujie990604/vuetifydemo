@@ -24,6 +24,14 @@ const router = createRouter({
     {
       path: '/content/btn',
       component: () => import('../pages/btn/page-btn.vue')
+    },
+    {
+      path: '/content/border-radius',
+      component: () => import('../pages/border-radius/border-radius.vue')
+    },
+    {
+      path: '/content/box-shaow',
+      component: () => import('../pages/box-shaow/box-shaow.vue')
     }
   ]
   // extendRoutes: setupLayouts,

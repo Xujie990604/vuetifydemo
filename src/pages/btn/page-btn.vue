@@ -38,12 +38,23 @@
   </v-container>
 
   <v-btn
-    :variant="btnAttribute.type"
+    :variant="btnAttribute.type as any"
     :[btnAttribute.icon]="`$vuetify`"
     :text="btnAttribute.text"
     :rounded="btnAttribute.rounded"
     :loading="btnAttribute.loading"
   ></v-btn>
+
+  <div class="btn-container">
+    <p>定制化按钮演示</p>
+
+    <div class="btn-1">
+      <VBtnSecondary>定制化按钮1</VBtnSecondary>
+    </div>
+    <div class="btn-2">
+      <VBtnTertiary>定制化按钮2</VBtnTertiary>
+    </div>
+  </div>
 </template>
 
 <script lang="ts" setup>
@@ -70,7 +81,7 @@ const btnAttribute = computed(() => {
     type: "",
     icon: "",
     rounded: "",
-    loading: false
+    loading: false,
   };
   // 1. 按钮类型
   if (btnConfig.type === "elevated") {
@@ -98,4 +109,9 @@ const btnAttribute = computed(() => {
 .v-container {
   padding-top: 0;
   padding-bottom: 0;
-}</style>
+}
+
+.btn-container {
+  padding-top: 20px;
+}
+</style>

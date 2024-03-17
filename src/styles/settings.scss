@@ -1,12 +1,15 @@
 /**
- * src/styles/settings.scss
- *
- * Configures SASS variables and Vuetify overwrites
- */
+* 导入 Vuetify 
+* 修改当前文件后，需要重新编译项目后才会生效
+*/
 
-// https://vuetifyjs.com/features/sass-variables/`
-// @use 'vuetify/settings' with (
-//   $color-pack: false
-// );
+// NOTE: 有些属性可以在多个地方进行配置，权重关系如下
+// 权重关系：settings.scss < 组件内 < vuetify.ts > 组件内 + ！important
 
-// TODO：如何自定义组件中使用到的 CSS 变量
+// TODO：如何进行分组，如果需要定义的变量较多，不分组的话比较难写
+@use 'vuetify/settings' with (
+  // btn
+  $button-height: 40px,
+  $button-banner-actions-padding: 16px,
+);
+

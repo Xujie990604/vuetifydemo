@@ -1,0 +1,4 @@
+// TODO： 目前在使用的只能每个组件单独进行导入，需要找个插件将该文件自动注册全局
+@forward './function';
+@forward './mixin';
+@forward './variables'
