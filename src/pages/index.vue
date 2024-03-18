@@ -13,7 +13,7 @@
       </v-list-group>
     </v-list>
   </v-card>
-  <v-btn class="d-sm-flex d-md-none d-none">ss</v-btn>
+  <v-btn class="w-75 bg-something toggle-btn" @click="toggleTheme">切换主题</v-btn>
 </template>
 
 <script lang="ts" setup>
@@ -21,16 +21,6 @@ import { reactive, ref } from "vue";
 
 // TODO: 使用 reactive 就会有问题，使用 ref 就没有问题，很奇怪
 const open = ref([]);
-
-const defaults = reactive({
-  'VBtn': {
-    'color': 'primary', 'size': 'large', 'variant': 'tonal'
-  },
-  'VBtnTertiary': {
-    rounded: false,
-    variant: 'tonal',
-  },
-})
 
 const listGroupArray = reactive([
   {
@@ -69,9 +59,27 @@ const listGroupArray = reactive([
     ],
   },
 ]);
+
+import { useTheme } from 'vuetify';
+const theme = useTheme()
+const themeList = ['myCustomBlueTheme', 'dark', 'light']
+let currentTheme = 0
+function toggleTheme() {
+  const turnToTheme = themeList[currentTheme % themeList.length]
+  theme.global.name.value = turnToTheme
+  currentTheme ++
+}
 </script>
 
 <style lang="scss" scoped>
 // 导入 scss 变量、混入、函数
 @use '../assets/css/base' as *;
+
+.toggle-btn {
+  position: fixed;
+  bottom: 50px;
+  margin: 0 12.5%;
+  border: 5px solid var(--v-border-color);
+  // background-color: rgb(var(--v-theme-something));
+}
 </style>
