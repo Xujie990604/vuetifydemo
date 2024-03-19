@@ -34,6 +34,13 @@ const listGroupArray = reactive([
         itemTitle: "按钮",
         router: '/content/btn'
       },
+      {
+        itemTitle: "骨架",
+        router: '/content/skeleton-loaders'
+      },      {
+        itemTitle: "栅格布局",
+        router: '/content/grid-layout'
+      },
     ],
   },
   {
@@ -79,7 +86,7 @@ function toggleTheme() {
   position: fixed;
   bottom: 50px;
   margin: 0 12.5%;
-  border: 5px solid var(--v-border-color);
+  border: 5px solid var(--v-u-border-color);
   // background-color: rgb(var(--v-theme-something));
 }
 </style>

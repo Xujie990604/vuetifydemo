@@ -32,7 +32,16 @@ const router = createRouter({
     {
       path: '/content/box-shaow',
       component: () => import('../pages/box-shaow/box-shaow.vue')
+    },
+    {
+      path: '/content/skeleton-loaders',
+      component: () => import('../pages/skeleton-loaders/skeleton-loaders.vue')
+    },
+    {
+      path: '/content/grid-layout',
+      component: () => import('../pages/grid-layout/grid-layout.vue')
     }
+
   ]
   // extendRoutes: setupLayouts,
 })

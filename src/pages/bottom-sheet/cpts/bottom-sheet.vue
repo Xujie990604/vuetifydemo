@@ -1,6 +1,4 @@
 <template>
-
-
   <v-bottom-sheet v-model="isShowSheet">
     <template v-slot:activator="{ props }">
       <div class="text-center">

@@ -15,7 +15,7 @@ const myCustomBlueTheme: ThemeDefinition = {
     something: '#E3F2FD'
   },
   variables: {
-    'border-color': 'red',
+    'u-border-color': 'red',
   }
 }
 
@@ -30,7 +30,7 @@ export default createVuetify({
           something: "#FFFFFF"
         },
         variables: {
-          'border-color': 'yellow'
+          'u-border-color': 'yellow'
         }
       },
       dark: {
@@ -38,7 +38,7 @@ export default createVuetify({
           something: "#000000"
         },
         variables: {
-          'border-color': 'blue'
+          'u-border-color': 'blue'
         }
       }
     }
