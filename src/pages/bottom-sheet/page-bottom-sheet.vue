@@ -1,5 +1,7 @@
 <template>
-  <bottomSheet></bottomSheet>
+  <div class="page-bottom-sheet">
+    <bottomSheet></bottomSheet>
+  </div>
 </template>
 
 <script lang="ts" setup>

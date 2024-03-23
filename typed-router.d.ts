@@ -46,6 +46,7 @@ declare module 'vue-router/auto/routes' {
     '/box-shaow/box-shaow': RouteRecordInfo<'/box-shaow/box-shaow', '/box-shaow/box-shaow', Record<never, never>, Record<never, never>>,
     '/btn/page-btn': RouteRecordInfo<'/btn/page-btn', '/btn/page-btn', Record<never, never>, Record<never, never>>,
     '/grid-layout/grid-layout': RouteRecordInfo<'/grid-layout/grid-layout', '/grid-layout/grid-layout', Record<never, never>, Record<never, never>>,
+    '/page-animation/page-animation': RouteRecordInfo<'/page-animation/page-animation', '/page-animation/page-animation', Record<never, never>, Record<never, never>>,
     '/skeleton-loaders/skeleton-loaders': RouteRecordInfo<'/skeleton-loaders/skeleton-loaders', '/skeleton-loaders/skeleton-loaders', Record<never, never>, Record<never, never>>,
     '/u-bottom-select/page-bottom-select': RouteRecordInfo<'/u-bottom-select/page-bottom-select', '/u-bottom-select/page-bottom-select', Record<never, never>, Record<never, never>>,
   }

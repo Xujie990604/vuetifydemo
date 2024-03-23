@@ -40,6 +40,10 @@ const router = createRouter({
     {
       path: '/content/grid-layout',
       component: () => import('../pages/grid-layout/grid-layout.vue')
+    },
+    {
+      path: '/content/page-animation',
+      component: () => import('../pages/page-animation/page-animation.vue')
     }
 
   ]
