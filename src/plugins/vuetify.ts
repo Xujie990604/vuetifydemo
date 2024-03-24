@@ -11,7 +11,7 @@ const myCustomBlueTheme: ThemeDefinition = {
   dark: true, // 设置为 false 表示这是一个浅色主题
   colors: {
     background: '#FFFFFF',
-    surface: '#FFFFFF',
+    surface: 'blue',
     something: '#E3F2FD'
   },
   variables: {
