@@ -44,6 +44,14 @@ const router = createRouter({
     {
       path: '/content/page-animation',
       component: () => import('../pages/page-animation/page-animation.vue')
+    },
+    {
+      path: '/content/cpt-test',
+      component: () => import('../pages/cpt-test/cpt-test.vue')
+    },
+    {
+      path: '/content/card-show',
+      component: () => import('../pages/card-show/card-show.vue')
     }
 
   ]

@@ -7,7 +7,6 @@
           :key="listGroup.listGroupTitle"
           :value="listGroup.listGroupTitle"
         >
-          <!-- TODO: 这个 props 是个什么东西，里面都有啥内容 -->
           <template v-slot:activator="{ props }">
             <v-list-item
               v-bind="props"
@@ -20,10 +19,12 @@
             :key="i"
             :title="listItem.itemTitle"
             :to="listItem.router"
-          ></v-list-item>
+          >
+          </v-list-item>
         </v-list-group>
       </v-list>
     </v-card>
+
     <v-btn class="w-75 bg-something toggle-btn" @click="toggleTheme"
       >切换主题</v-btn
     >
@@ -32,6 +33,8 @@
 
 <script lang="ts" setup>
 import { reactive, ref } from "vue";
+
+const chip = ref(true);
 
 // TODO: 使用 reactive 就会有问题，使用 ref 就没有问题，很奇怪
 const open = ref([]);
@@ -55,6 +58,10 @@ const listGroupArray = reactive([
       {
         itemTitle: "栅格布局",
         router: "/content/grid-layout",
+      },
+      {
+        itemTitle: "卡片组件展示",
+        router: "/content/card-show",
       },
     ],
   },
@@ -86,6 +93,10 @@ const listGroupArray = reactive([
       {
         itemTitle: "动画",
         router: "/content/page-animation",
+      },
+      {
+        itemTitle: "组件测试",
+        router: "/content/cpt-test",
       },
     ],
   },
