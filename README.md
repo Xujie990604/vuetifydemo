@@ -13,3 +13,4 @@
 ## 技术栈
 
 * Vue3 + Vite4 + TS + Vuetify
+* 测试镜像
